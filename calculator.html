@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+    <body>
+        <div></div>
+        <div class="cal">
+            <div class="input">
+               <input type="text" id="ip">
+            </div>
+            <div class="bt">
+                <button class="a" onclick="display('9')" name="9">9</button>
+                <button class="a" onclick="display('8')" name="8">8</button>
+                <button class="a" onclick="display('7')" name="7">7</button>
+                <button class="a" onclick="display('+')" name="+">+</button>
+            </div>
+            <div class="bt">
+                <button class="a" onclick="display('6')" name="6">6</button>
+                <button class="a" onclick="display('5')" name="5">5</button>
+                <button class="4" onclick="display('4')" name="4">4</button>
+                <button class="-" onclick="display('-')" name="-">-</button>
+            </div>
+            <div class="bt">
+                <button class="3" onclick="display('3')" name="3">3</button>
+                <button class="2" onclick="display('2')" name="2">2</button>
+                <button class="1" onclick="display('1')" name="1">1</button>
+                <button class="*" onclick="display('*')" name="*">*</button>
+            </div>
+            <div class="bt">
+                <button class="0" onclick="display('0')" name="0">0</button>
+                <button class="c" onclick="del()" name="c">C</button>
+                <button class="/" onclick="display('/')" name="/">/</button>
+                <button class="=" onclick="cal()" name="=">=</button>
+            </div>
+        </div>
+        <script>
+            function display(value){
+                let display=document.getElementById('ip').value+=value;
+            }
+            function cal()
+            {
+                let display=document.getElementById('ip');
+                
+                    display.value=eval(ip.value);
+                
+            }
+            function del(){
+                let dis=document.getElementById('ip');
+                dis.value="";
+            }
+
+        </script>
+    </body>
+</html>
